@@ -8,6 +8,27 @@ import Countdown from 'react-countdown'
 function App() {
 
   const [isMenuActive, activeMenu] = useState(false)
+  const getLocalStorageValue  = (s) => localStorage.getItem(s);
+  const [data, setData] = useState(
+    {date: Date.now() + 42000000, delay: 60000}
+  );
+  const wantedDelay = 60000;
+
+  useEffect(() => {
+    const savedDate = getLocalStorageValue("end_date");
+    if (savedDate != null && !isNaN(savedDate)){
+      const currentTime = Date.now();
+      const delta = parseInt(savedDate, 10) - currentTime;
+
+      if (delta > wantedDelay){
+        if (localStorage.getItem("end_date").length > 0)
+        localStorage.removeItem("end_date");
+      }
+      else {
+        setData({date: currentTime, delay: delta});
+      }
+    }
+  }, []);
   return (
     <div className="App">
       <div className="" id="gatsby-focus-wrapper">
@@ -61,7 +82,19 @@ function App() {
           <div className='presale-body'>
             {/*<span>12 : 10 : 10</span>*/}
             {/*<span id="demo"></span>*/}
-            <Countdown date={Date.now() + 43200000} />
+            <Countdown date={data.date + data.delay} onStart={(delta) => {
+              if (localStorage.getItem("end_date") == null)
+              localStorage.setItem(
+                "end_date",
+                JSON.stringify(data.date + data.delay)
+                );
+              }}
+              onComplete={() => {
+                if (localStorage.getItem("end_date") != null)
+                localStorage.removeItem("end_date");
+              }}
+              />
+            {/*<MemoCountdown />*/}
           </div>
           <div className='presale-card'>
             <h1 className=''>Instructions for presale</h1>

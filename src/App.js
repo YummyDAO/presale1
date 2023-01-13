@@ -78,11 +78,11 @@ function App() {
           </div>
         </div>
         <div className='presale'>
-          <h1 className='presale-text'>Presale starts in</h1>
+          <h1 className='presale-text'>Presale starts at</h1>
           <div className='presale-body'>
-            {/*<span>12 : 10 : 10</span>*/}
+            <span>8 pm UTC</span>
             {/*<span id="demo"></span>*/}
-            <Countdown date={data.date + data.delay} onStart={(delta) => {
+            {/*<Countdown date={data.date + data.delay} onStart={(delta) => {
               if (localStorage.getItem("end_date") == null)
               localStorage.setItem(
                 "end_date",
@@ -93,7 +93,8 @@ function App() {
                 if (localStorage.getItem("end_date") != null)
                 localStorage.removeItem("end_date");
               }}
-              />
+            />*/}
+            
             {/*<MemoCountdown />*/}
           </div>
           <div className='presale-card'>

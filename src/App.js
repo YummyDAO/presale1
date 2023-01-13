@@ -3,36 +3,9 @@ import logo from './logo.png';
 import './App.css';
 import Hamburger from './components/Hamburger'
 import SideMenu from './components/SideMenu'
+import Countdown from 'react-countdown'
 
 function App() {
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 13, 2023 12:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
 
   const [isMenuActive, activeMenu] = useState(false)
   return (
@@ -87,7 +60,8 @@ var x = setInterval(function() {
           <h1 className='presale-text'>Presale starts in</h1>
           <div className='presale-body'>
             {/*<span>12 : 10 : 10</span>*/}
-            <span id="demo"></span>
+            {/*<span id="demo"></span>*/}
+            <Countdown date={Date.now() + 43200000} />
           </div>
           <div className='presale-card'>
             <h1 className=''>Instructions for presale</h1>

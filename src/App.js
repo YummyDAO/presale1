@@ -10,9 +10,9 @@ function App() {
   const [isMenuActive, activeMenu] = useState(false)
   const getLocalStorageValue  = (s) => localStorage.getItem(s);
   const [data, setData] = useState(
-    {date: Date.now() + 42000000, delay: 60000}
+    {date: Date.now(), delay: 25200000}
   );
-  const wantedDelay = 60000;
+  const wantedDelay = 25200000;
 
   useEffect(() => {
     const savedDate = getLocalStorageValue("end_date");

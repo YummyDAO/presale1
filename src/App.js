@@ -58,7 +58,7 @@ var x = setInterval(function() {
               <a href='#' className='text-link'>
                 Earn
               </a>
-              <a href='#' className='text-link'>
+              <a href='https://presale.maddyprotocol.xyz' className='text-link'>
                 Presale
               </a>
             </div>

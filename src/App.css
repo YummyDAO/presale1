@@ -856,6 +856,7 @@ a {
   margin: 0;
   text-align: center;
   font-size: 3rem;
+  justify-content: space-around;
 }
 .presale{
   display: flex;
@@ -864,9 +865,97 @@ a {
   align-items: center;
   width: 100%;
 }
+.presale-card1{
+  background-color: #141429;
+    border-radius: 2.75rem;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+}
+.presale-card1 span{
+  font-size: 2.2rem;
+}
+.next{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.next-text{
+  font-size: 1.2rem !important;
+}
+.next1{
+  display: flex;
+    flex-direction: column;
+}
+.presale-card1 input{
+  height: 70px;
+  width: 100%;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 2rem;
+}
+.presale-card2{
+  background-color: #141429;
+    border-radius: 2.75rem;
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    padding: 40px;
+    flex-direction: row;
+}
+.maddytab{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.maddylogo{
+  padding-bottom: 30%;
+}
+.maddytab span{
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.flex{
+  display: flex;
+}
+.esmaddytab{
+  display: flex;
+    flex-direction: column;
+}
+.maddyimg{
+  height: 80%;
+  width: 80%;
+  border-radius: 10px;
+  padding-bottom: 30%;
+}
+.wes{
+  padding-bottom: 10%;
+}
+.btn{
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-color: #fff;
+}
+.wut{
+  font-size: 1.3rem;
+}
 @media (min-width: 768px){
   .presale-text{
     font-size: 3.4375rem;
+  }
+  .presale-card1{
+    width: 40%;
+  }
+  .presale-card2{
+    width: 40%;
+  }
+  .wut{
+    font-size: 1.3rem;
+    padding-bottom: 5%;
   }
 }
 @media (max-width: 768px) {
@@ -875,5 +964,19 @@ a {
   }
   .presale-card h1{
     font-size: 1.5rem;
+  }
+  .presale-body{
+    flex-direction: column;
+  }
+  .presale-card1{
+    width: 100%;
+  }
+  .presale-card2{
+    width: 100%;
+    background: transparent;
+  }
+  .wut{
+    font-size: 1.3rem;
+    padding-bottom: 10%;
   }
 }

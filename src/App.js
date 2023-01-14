@@ -279,6 +279,7 @@ useEffect(() => {
           </div>
         </div>
         <div className='presale'>
+<<<<<<< HEAD
           {/*<h1 className='presale-text'>Presale starts at</h1>*/}
           <div className='presale-body flex'>
             <div className="presale-card1">
@@ -309,6 +310,11 @@ useEffect(() => {
               </div>
             </div>
             {/*<span>8 pm UTC</span>*/}
+=======
+          <h1 className='presale-text'>Presale starts at</h1>
+          <div className='presale-body'>
+            <span>8 pm UTC</span>
+>>>>>>> 6ee841045f802e2cf06db43096431a0fb6ed08e7
             {/*<span id="demo"></span>*/}
             {/*<Countdown date={data.date + data.delay} onStart={(delta) => {
               if (localStorage.getItem("end_date") == null)
